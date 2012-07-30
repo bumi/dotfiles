@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# Make sure we’re using the latest Homebrew
+brew update
+
+brew install ack
+brew install coreutils
+brew install git
+brew install imagemagick
+brew install autojump
+brew install todo-ext
+brew install tree

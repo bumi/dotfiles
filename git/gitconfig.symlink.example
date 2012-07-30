@@ -1,0 +1,39 @@
+[user]
+	name = Michael Bumann
+	email = michael@railslove.com
+[merge]
+	summary = true
+	tool = xxdiff
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+	interactive = auto
+[alias]
+	st = status
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+	aa= !git add -u && git add . && git status
+	up = !git fetch origin && git rebase origin/master
+	ir = !git rebase -i origin/master
+	done = !git fetch && git rebase origin/master && git checkout master && git merge @{-1} && rake && git push
+	cleanup = !git remote prune origin && git gc && git clean -dfx && git stash clear
+	rmb = !sh -c 'git branch -D $1 && git push origin :$1' -
+[core]
+	excludesfile = /Users/bumi/.gitignore
+	autocrlf = input
+	safecrlf = true
+[github]
+	user = bumi
+	token = token
+[branch]
+	autosetupmerge = true
+[credential]
+	helper = osxkeychain
+[url "git://github.com/"]
+	# Read-only
+	insteadOf = gh:
+[url "git@github.com:"]
+	# With write access
+	insteadOf = wgh:
+[url "git@heroku.com:"]
+	insteadOf = heroku:

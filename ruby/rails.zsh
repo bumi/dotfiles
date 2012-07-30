@@ -1,0 +1,1 @@
+alias rs='rails server'

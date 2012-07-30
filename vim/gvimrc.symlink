@@ -1,0 +1,8 @@
+set guioptions-=T "remove toolbar
+
+" start fullscreen
+set lines=999
+set columns=999
+
+" Better line-height
+set linespace=8

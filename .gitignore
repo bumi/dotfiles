@@ -1,0 +1,4 @@
+git/gitconfig.symlink
+vim/vim.symlink/undo/*
+vim/vim.symlink/backups/*
+vim/vim.symlink/swaps/*
