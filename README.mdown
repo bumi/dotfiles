@@ -1,0 +1,5 @@
+= bumi dotfiles
+
+my dotfiles. The structure and setup is heavily inspired by https://github.com/holman/dotfiles/ and configuration collected from ALL THE SMART PEOPLE on the interwebs. thanks!
+
+
