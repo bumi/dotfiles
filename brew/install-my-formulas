@@ -10,3 +10,4 @@ brew install imagemagick
 brew install autojump
 brew install todo-ext
 brew install tree
+brew install hub
