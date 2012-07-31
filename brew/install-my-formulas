@@ -3,8 +3,11 @@
 # Make sure we’re using the latest Homebrew
 brew update
 
+brew doctor
+
 brew install ack
 brew install coreutils
+brew install grc
 brew install git
 brew install imagemagick
 brew install autojump
