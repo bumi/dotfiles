@@ -10,4 +10,6 @@ alias cd...='cd ../..'
 
 alias md='mkdir -p'
 
+alias code='cd ~/code&&echo "\n-----> $fg_bold[cyan]HAPPY CODING $reset_color \n"'
+
 alias pubkey="more ~/.ssh/id_dsa.public | pbcopy | echo '=> Public key copied to pasteboard.'"
