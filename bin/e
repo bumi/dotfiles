@@ -18,8 +18,8 @@
 
 if test "$1" == ""
 then
-  exec $EDITOR .
+  exec $EDITOR
 else
 	cd "$1"
-  exec $EDITOR .
+  exec $EDITOR
 fi
