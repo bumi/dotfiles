@@ -28,4 +28,6 @@ if [ -f `brew --prefix`/etc/autojump ]; then
   . `brew --prefix`/etc/autojump
 fi
 
-echo "> $fg_bold[cyan]Hello `whoami`, have a great day!"
+echo "> $fg_bold[cyan]Hello `whoami`, have a great day! $reset_color"
+echo "> these are your current ToDos:"
+t projectview
