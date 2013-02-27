@@ -9,11 +9,12 @@ set enc=utf-8
 set noswapfile
 set autoindent             " automatic indent new lines
 set shell=/bin/zsh
-set tabstop=2
+
+" Show “invisible” characters
+set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
 set mouse=a
 set number
 set smartindent
-set expandtab              " expand tabs to spaces
 set timeoutlen=500              " if you have two commands, ',dv' and ',d' it will take 'timeoutlen' milliseconds to recognize which one you're going for
 
 " Use the OS clipboard by default (on versions compiled with `+clipboard`)
@@ -33,6 +34,13 @@ set directory=~/.vim/swaps
 if exists("&undodir")
 	set undodir=~/.vim/undo
 endif
+
+:set nowrap " no word wrap
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
+set expandtab
+autocmd FileType * set tabstop=2|set shiftwidth=2|set expandtab
 
 let mapleader = ","
 
