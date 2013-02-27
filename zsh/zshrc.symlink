@@ -29,5 +29,3 @@ if [ -f `brew --prefix`/etc/autojump ]; then
 fi
 
 echo "> $fg_bold[cyan]Hello `whoami`, have a great day! $reset_color"
-echo "> these are your current ToDos:"
-t projectview
