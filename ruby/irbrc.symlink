@@ -1,9 +1,9 @@
-require 'rubygems' rescue nil
+
+IRB.conf[:AUTO_INDENT] = true
+
+require 'rubygems'
+require 'interactive_editor'
 require 'wirble'
-require 'awesome_print'
 
-# load wirble
 Wirble.init
-Wirble.coloriz
-
-IRB.conf[:AUTO_INDENT] = truee
+Wirble.colorize
