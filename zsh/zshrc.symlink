@@ -17,15 +17,13 @@ autoload -U compinit
 compinit
 
 # load every completion after autocomplete loads
-for config_file ($ZSH/**/completion.sh) source $config_file
+# for config_file ($ZSH/**/completion.sh) source $config_file
 
 
 # hub
 eval "$(hub alias -s)"
 
 #autojump
-if [ -f `brew --prefix`/etc/autojump ]; then
-  . `brew --prefix`/etc/autojump
-fi
+[[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
 
 echo "> $fg_bold[cyan]Hello `whoami`, have a great day! $reset_color"
