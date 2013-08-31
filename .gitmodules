@@ -37,3 +37,6 @@
 [submodule "vim/vim.symlink/bundle/handlebars"]
 	path = vim/vim.symlink/bundle/handlebars
 	url = git://github.com/nono/vim-handlebars.git
+[submodule "colors"]
+	path = colors
+	url = https://github.com/hukl/Smyck-Color-Scheme/
