@@ -47,10 +47,6 @@ directory_name(){
 PROMPT='$FG[237]------------------------------------------------------------%{$reset_color%}
 %{$fg[cyan]%}%2~$(git_dirty)$(need_push) » %{$reset_color%}'
 
-set_prompt () {
-  export RPROMPT="%{$fg[cyan]%}$(notes_prompt TODO)%{$reset_color%} %{$fg_bold[yellow]%}$(notes_prompt HACK)%{$reset_color%} %{$fg_bold[red]%}$(notes_prompt FIXME)%{$reset_color%} %{$fg_bold[white]%}$(todo_prompt +next)%{$reset_color%}"
-}
-
 precmd() {
   title "zsh" "%m" "%55<...<%~"
 }
