@@ -6,6 +6,9 @@ task :install do
   `cd #{dotfiles_dir} && git submodule init`
   `cd #{dotfiles_dir} && git submodule update`
   
+  `open #{File.join(dotfiles_dir, "colors/Smyck.itermcolors")}`
+  `open #{File.join(dotfiles_dir, "colors/Smyck.terminal")}`
+  
   linkables = Dir.glob('*/**{.symlink}')
 
   skip_all = false
