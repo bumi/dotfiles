@@ -9,6 +9,9 @@ task :install do
   `open /Applications/iTerm.app`
   `open #{File.join(dotfiles_dir, "colors/Smyck.itermcolors")}`
   `open #{File.join(dotfiles_dir, "colors/Smyck.terminal")}`
+  `defaults write com.apple.Terminal "Default Window Settings" Smyck`
+  `defaults write com.apple.Terminal "Startup Window Settings" Smyck`
+
   
   linkables = Dir.glob('*/**{.symlink}')
 
