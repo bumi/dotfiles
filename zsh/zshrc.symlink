@@ -21,10 +21,16 @@ compinit
 # for config_file ($ZSH/**/completion.sh) source $config_file
 
 
-# hub
-eval "$(hub alias -s)"
-
 #autojump
-[[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
+#
+# if brew is installed
+if which brew > /dev/null 2>&1; then
+  # if `brew --prefix`/etc/autojump.sh exists
+  [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
+fi
+#
+# if /etc/profile.d/autojump.sh exists
+[[ -s /etc/profile.d/autojump.sh ]] &&  source /etc/profile.d/autojump.sh
+
 
 echo "> $fg_bold[cyan]Hello `whoami`, have a great day! $reset_color"

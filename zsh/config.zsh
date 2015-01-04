@@ -6,6 +6,7 @@ fi
 
 export LSCOLORS="exfxcxdxbxegedabagacad"
 export CLICOLOR=true
+export TERM='xterm-256color'
 
 fpath=($ZSH/zsh/functions $fpath)
 

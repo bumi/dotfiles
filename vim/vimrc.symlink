@@ -2,6 +2,7 @@ call pathogen#infect()
 syntax on
 filetype plugin indent on
 
+set t_Co=256
 set nocompatible
 " Use UTF-8 without BOM
 set encoding=utf-8 nobomb
@@ -54,7 +55,8 @@ set visualbell             " shut the fuck up
 " Highlight current line
 set cursorline
 
-set gfn=Menlo:h14
+"set gfn=Menlo:h14
+set gfn=Liberation\ Mono:h14
 colorscheme smyck
 
 " files
