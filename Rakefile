@@ -5,14 +5,15 @@ task :install do
   dotfiles_dir = File.expand_path(File.dirname(__FILE__))
   `cd #{dotfiles_dir} && git submodule init`
   `cd #{dotfiles_dir} && git submodule update`
- 
-  `open /Applications/iTerm.app`
-  `open #{File.join(dotfiles_dir, "colors/Smyck.itermcolors")}`
-  `open #{File.join(dotfiles_dir, "colors/Smyck.terminal")}`
-  `defaults write com.apple.Terminal "Default Window Settings" Smyck`
-  `defaults write com.apple.Terminal "Startup Window Settings" Smyck`
 
-  
+  if RUBY_PLATFORM =~ /darwin/
+    `open /Applications/iTerm.app`
+    `open #{File.join(dotfiles_dir, "colors/Smyck.itermcolors")}`
+    `open #{File.join(dotfiles_dir, "colors/Smyck.terminal")}`
+    `defaults write com.apple.Terminal "Default Window Settings" Smyck`
+    `defaults write com.apple.Terminal "Startup Window Settings" Smyck`
+  end
+
   linkables = Dir.glob('*/**{.symlink}')
 
   skip_all = false
