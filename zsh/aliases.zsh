@@ -6,6 +6,11 @@ if which gls > /dev/null 2>&1; then
   alias l='gls -laih --color'
   alias ll='gls -l --color'
   alias ls='gls -F --color'
+else
+  alias la='ls -la --color'
+  alias l='ls -laih --color'
+  alias ll='ls -l --color'
+  alias ls='ls -F --color'
 fi
 
 alias ..='cd ..'
