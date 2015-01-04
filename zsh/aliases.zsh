@@ -1,8 +1,12 @@
 alias ...='cd ../..'
-alias la='gls -la --color'
-alias l='gls -laih --color'
-alias ll='gls -l --color'
-alias ls='gls -F --color'
+
+# osx GNU Fileutils
+if which gls > /dev/null 2>&1; then
+  alias la='gls -la --color'
+  alias l='gls -laih --color'
+  alias ll='gls -l --color'
+  alias ls='gls -F --color'
+fi
 
 alias ..='cd ..'
 alias cd..='cd ..'
