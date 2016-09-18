@@ -1,4 +1,4 @@
 #!/bin/sh
 # https://github.com/pengwynn/dotfiles/blob/master/bin/git-delete-local-merged
 
-git branch -d `git branch --merged | grep -v '^*' | tr -d '\n'`
+git branch -d `git branch --merged | grep -v '^*' | grep -v 'master' | tr -d '\n'`
