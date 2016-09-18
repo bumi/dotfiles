@@ -20,6 +20,7 @@ brew 'rbenv'
 brew 'wget'
 brew 'youtube-dl'
 
+cask 'iterm2'
 cask '1password'
 cask 'adium'
 cask 'atom'
