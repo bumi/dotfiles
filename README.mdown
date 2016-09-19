@@ -1,5 +1,29 @@
-= bumi dotfiles
+bumi dotfiles
+===========
 
-my dotfiles. The structure and setup is heavily inspired by https://github.com/holman/dotfiles/ and configuration collected from ALL THE SMART PEOPLE on the interwebs. thanks!
+my dotfiles. \o/  
+The structure and setup is heavily inspired by https://github.com/holman/dotfiles/ and configuration collected from ALL THE SMART PEOPLE on the interwebs. thanks!
 
 
+Setup
+-----------
+
+    git clone https://github.com/holman/dotfiles.git ~/.dotfiles
+    cd ~/.dotfiles
+    git submodule init
+    git submodule update
+    script/bootstrap
+
+
+Colors:
+
+    open /Applications/iTerm.app
+    open ~/.dotfiles/colors/Smyck.itermcolors
+    open ~/.dotfiles/colors/Smyck.terminal
+    defaults write com.apple.Terminal "Default Window Settings" Smyck
+    defaults write com.apple.Terminal "Startup Window Settings" Smyck
+    
+ZSH:
+
+    add to `/etc/shells` `/usr/local/bin/zsh`
+    `chsh -s /usr/local/bin/zsh` 

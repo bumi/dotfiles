@@ -1,6 +1,5 @@
-[user]
-	name = Michael Bumann
-	email = michael@railslove.com
+[include]
+ path = ~/.gitconfig.local
 [merge]
 	summary = true
 	tool = xxdiff
@@ -19,12 +18,10 @@
 	cleanup = !git remote prune origin && git gc && git clean -dfx && git stash clear
 	rmb = !sh -c 'git branch -D $1 && git push origin :$1' -
 [core]
-	excludesfile = /Users/bumi/.gitignore
+	editor = vim
+	excludesfile = ~/.gitignore
 	autocrlf = input
 	safecrlf = true
-[github]
-	user = bumi
-	token = token
 [branch]
 	autosetuprebase = always
 [push]
