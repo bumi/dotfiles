@@ -19,8 +19,8 @@ alias cd...='cd ../..'
 
 alias md='mkdir -p'
 
-alias code='cd ~/code&&echo "\n-----> $fg_bold[cyan]HAPPY CODING $reset_color \n"'
+alias mvim='/Applications/MacVim.app/Contents/MacOS/Vim -g'
 
-alias pubkey="more ~/.ssh/id_dsa.pub | pbcopy | echo '=> Public key copied to pasteboard.'"
+alias code='cd ~/src&&echo "\n-----> $fg_bold[cyan]HAPPY CODING $reset_color \n"'
 
 alias regtest="bitcoind -conf=$HOME/.bitcoin/bitcoin-regtest.conf"
