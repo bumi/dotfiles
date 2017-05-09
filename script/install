@@ -6,9 +6,23 @@ set -e
 
 cd "$(dirname $0)"/..
 
-# Run Homebrew through the Brewfile
-echo "› brew bundle"
-brew bundle
+if [ "$(uname -s)" == "Darwin" ]; then
+  export ZSH=$HOME/.dotfiles
+
+  # Set macOS defaults
+  $ZSH/macos/set-defaults.sh
+
+  # Install homebrew
+  $ZSH/homebrew/install.sh
+
+  # Upgrade homebrew
+  echo "› brew update"
+  brew update
+
+  # Run Homebrew through the Brewfile
+  echo "› brew bundle"
+  brew bundle
+fi
 
 # find the installers and run them iteratively
 find . -name install.sh | while read installer ; do sh -c "${installer}" ; done

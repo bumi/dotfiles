@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 #
 # dot
 #
@@ -6,15 +6,18 @@
 # to make sure you're on the latest and greatest.
 export ZSH=$HOME/.dotfiles
 
-# Set macOS defaults
-$ZSH/macos/set-defaults.sh
+# If we're on a Mac
+if [ "$(uname -s)" == "Darwin" ]; then
+  # Set macOS defaults
+  $ZSH/macos/set-defaults.sh
 
-# Install homebrew
-$ZSH/homebrew/install.sh
+  # Install homebrew
+  $ZSH/homebrew/install.sh
 
-# Upgrade homebrew
-echo "› brew update"
-brew update
+  # Upgrade homebrew
+  echo "› brew update"
+  brew update
+fi
 
 # Install software
 echo "› $ZSH/script/install"

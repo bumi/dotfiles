@@ -26,6 +26,7 @@
 	autosetuprebase = always
 [push]
 	default = tracking
+  followTags = true
 [credential]
 	helper = osxkeychain
 [url "git://github.com/"]
