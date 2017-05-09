@@ -153,4 +153,14 @@ then
 fi
 
 echo ''
+
+git submodule init
+git submodule update
+
+# find the installers and run them iteratively
+echo "running installers"
+find . -name install.sh | while read installer ; do sh -c "${installer}" ; done
+echo "done"
+
+
 echo '  All installed!'
