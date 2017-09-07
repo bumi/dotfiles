@@ -1,8 +1,9 @@
 set guioptions-=T "remove toolbar
 
-" start fullscreen
-set lines=999
-set columns=999
+set gfn=Liberation\ Mono
 
 " Better line-height
 set linespace=8
+set lines=60
+set columns=200
+

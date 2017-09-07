@@ -1,5 +1,9 @@
 alias g='git'
 
+if which hub > /dev/null 2>^1; then
+  alias git=hub
+fi
+
 #
 # Will return the current branch name
 # Usage example: git pull origin $(current_branch)
@@ -16,6 +20,6 @@ function current_repository() {
 }
 
 # these aliases take advantage of the previous function
-alias ggpull='git pull origin $(current_branch)'
-alias ggpush='git push origin $(current_branch)'
-alias ggpnp='git pull origin $(current_branch) && git push origin $(current_branch)'
+alias gpull='git pull origin $(current_branch)'
+alias gpush='git push origin $(current_branch)'
+alias gpnp='git pull origin $(current_branch) && git push origin $(current_branch)'

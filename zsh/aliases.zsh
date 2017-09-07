@@ -13,6 +13,10 @@ else
   alias ls='ls -F --color'
 fi
 
+if ! which open > /dev/null 2>&1; then
+  alias open='xdg-open'
+fi
+
 alias ..='cd ..'
 alias cd..='cd ..'
 alias cd...='cd ../..'
@@ -24,3 +28,9 @@ alias mvim='/Applications/MacVim.app/Contents/MacOS/Vim -g'
 alias code='cd ~/src&&echo "\n-----> $fg_bold[cyan]HAPPY CODING $reset_color \n"'
 
 alias regtest="bitcoind -conf=$HOME/.bitcoin/bitcoin-regtest.conf"
+
+if [ "$(uname)" = "Linux" ]; then  
+  alias git-credential-helper='/usr/lib/git-core/git-credential-gnome-keyring'
+else
+  alias git-credential-helper='osxkeychain'
+fi

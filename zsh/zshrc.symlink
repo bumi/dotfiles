@@ -17,9 +17,6 @@ fi
 autoload -U compinit
 compinit
 
-# load every completion after autocomplete loads
-# for config_file ($ZSH/**/completion.sh) source $config_file
-
 
 #autojump
 #
@@ -32,5 +29,6 @@ fi
 # if /etc/profile.d/autojump.sh exists
 [[ -s /etc/profile.d/autojump.sh ]] &&  source /etc/profile.d/autojump.sh
 
+source <(gopass completion zsh)
 
 echo "> $fg_bold[cyan]Hello `whoami`, have a great day! $reset_color"

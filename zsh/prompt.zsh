@@ -47,6 +47,6 @@ directory_name(){
 PROMPT='$FG[237]------------------------------------------------------------%{$reset_color%}
 %{$fg[cyan]%}%2~$(git_dirty)$(need_push) » %{$reset_color%}'
 
-precmd() {
-  title "zsh" "%m" "%55<...<%~"
-}
+# precmd() {
+#  title "zsh" "%m" "%55<...<%~"
+#}

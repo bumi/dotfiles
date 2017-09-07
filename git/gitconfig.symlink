@@ -12,7 +12,7 @@
 	st = status
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
 	aa= !git add -u && git add . && git status
-	up = !git fetch origin && git rebase origin/master
+	up = pull --rebase --autostash
 	ir = !git rebase -i origin/master
 	done = !git fetch && git rebase origin/master && git checkout master && git merge @{-1} && rake && git push
 	cleanup = !git remote prune origin && git gc && git clean -dfx && git stash clear
@@ -27,8 +27,8 @@
 [push]
 	default = tracking
   followTags = true
-[credential]
-	helper = osxkeychain
+[pull]
+  rebase = true
 [url "git://github.com/"]
 	# Read-only
 	insteadOf = gh:

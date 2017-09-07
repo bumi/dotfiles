@@ -19,7 +19,7 @@ set smartindent
 set timeoutlen=500              " if you have two commands, ',dv' and ',d' it will take 'timeoutlen' milliseconds to recognize which one you're going for
 
 " Use the OS clipboard by default (on versions compiled with `+clipboard`)
-set clipboard=unnamed
+set clipboard=unnamedplus
 " Enhance command-line completion
 set wildmenu
 " Allow cursor keys in insert mode
@@ -56,7 +56,7 @@ set visualbell             " shut the fuck up
 set cursorline
 
 "set gfn=Menlo:h14
-set gfn=Liberation\ Mono:h14
+set gfn=Liberation\ Mono:14
 colorscheme smyck
 
 " files
@@ -137,6 +137,10 @@ nmap <leader>ll :rightbelow vnew %:p<CR>:A<CR>
 nmap <leader>kk :leftabove  new %:p<CR>:A<CR>
 nmap <leader>jj :rightbelow new %:p<CR>:A<CR>
 
+
+nmap <C-s> :w <Enter>
+nmap <C-c> y
+nmap <C-v> p
 
 " NERDTree
 " --------
