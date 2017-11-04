@@ -51,6 +51,10 @@ bindkey '^[[5C' end-of-line
 bindkey '^[[A' up-line-or-search
 bindkey '^[[B' down-line-or-search
 
+# history substring search from: https://github.com/zsh-users/zsh-history-substring-search - see functions/zsh-history-substring-search.zsh
+bindkey '^[[1;2A' history-substring-search-up
+bindkey '^[[1;2B' history-substring-search-down
+
 bindkey '^?' backward-delete-char
 bindkey "^[[3~" delete-char
 bindkey "^[3;5~" delete-char
