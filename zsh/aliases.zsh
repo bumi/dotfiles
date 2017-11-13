@@ -1,4 +1,3 @@
-alias ...='cd ../..'
 
 # osx GNU Fileutils
 if which gls > /dev/null 2>&1; then
@@ -18,6 +17,7 @@ if ! which open > /dev/null 2>&1; then
 fi
 
 alias ..='cd ..'
+alias ...='cd ../..'
 alias cd..='cd ..'
 alias cd...='cd ../..'
 
