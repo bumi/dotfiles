@@ -1,6 +1,6 @@
 alias g='git'
 
-if which hub > /dev/null 2>^1; then
+if which hub > /dev/null 2>&1; then
   alias git=hub
 fi
 
