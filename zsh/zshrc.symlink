@@ -31,6 +31,4 @@ fi
 
 if [ -e /home/bumi/.nix-profile/etc/profile.d/nix.sh ]; then . /home/bumi/.nix-profile/etc/profile.d/nix.sh; fi # Nix package manger
 
-source <(gopass completion zsh)
-
 echo "> $fg_bold[cyan]Hello `whoami`, have a great day! $reset_color"
