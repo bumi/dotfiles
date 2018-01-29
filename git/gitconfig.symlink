@@ -38,3 +38,5 @@
 	insteadOf = wgh:
 [url "git@heroku.com:"]
 	insteadOf = heroku:
+[credential]
+	helper = /usr/lib/git-core/git-credential-libsecret
