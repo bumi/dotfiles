@@ -16,6 +16,8 @@ if ! which open > /dev/null 2>&1; then
   alias open='xdg-open'
 fi
 
+alias gp="gopass"
+
 alias ..='cd ..'
 alias ...='cd ../..'
 alias cd..='cd ..'
