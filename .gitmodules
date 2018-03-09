@@ -22,9 +22,6 @@
 [submodule "vim/vim.symlink/bundle/nerdtree"]
 	path = vim/vim.symlink/bundle/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
-[submodule "vim/vim.symlink/bundle/vim-powerline"]
-	path = vim/vim.symlink/bundle/vim-powerline
-	url = https://github.com/Lokaltog/vim-powerline.git
 [submodule "vim/vim.symlink/bundle/vim-nerdtree-tabs"]
 	path = vim/vim.symlink/bundle/vim-nerdtree-tabs
 	url = https://github.com/jistr/vim-nerdtree-tabs.git
