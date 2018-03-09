@@ -17,7 +17,6 @@ set mouse=a
 set number
 set smartindent
 set timeoutlen=500              " if you have two commands, ',dv' and ',d' it will take 'timeoutlen' milliseconds to recognize which one you're going for
-set colorcolumn=81
 
 " Use the OS clipboard by default (on versions compiled with `+clipboard`)
 set clipboard=unnamedplus
@@ -77,9 +76,6 @@ let g:ctrlp_map = '<c-t>'
 nnoremap <leader>, :CtrlP<CR> 
 
 set fillchars+=stl:\ ,stlnc:\
-
-" powerline: https://github.com/Lokaltog/vim-powerline
-set laststatus=2
 
 
 " KEYS:
