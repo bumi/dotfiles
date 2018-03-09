@@ -17,6 +17,7 @@ set mouse=a
 set number
 set smartindent
 set timeoutlen=500              " if you have two commands, ',dv' and ',d' it will take 'timeoutlen' milliseconds to recognize which one you're going for
+set colorcolumn=81
 
 " Use the OS clipboard by default (on versions compiled with `+clipboard`)
 set clipboard=unnamedplus
@@ -138,9 +139,12 @@ nmap <leader>kk :leftabove  new %:p<CR>:A<CR>
 nmap <leader>jj :rightbelow new %:p<CR>:A<CR>
 
 
+" not the vim style :) save/c&p
 nmap <C-s> :w <Enter>
-nmap <C-c> y
-nmap <C-v> p
+vmap <C-c> "+yi
+vmap <C-x> "+c
+vmap <C-v> c<ESC>"+p
+imap <C-v> <C-r><C-o>+"
 
 " NERDTree
 " --------
@@ -176,7 +180,7 @@ set statusline+=%*
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 0
-let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
 let g:syntastic_aggregate_errors = 1
 
