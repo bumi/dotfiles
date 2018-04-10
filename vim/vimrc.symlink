@@ -175,6 +175,8 @@ set statusline+=%{fugitive#statusline()}
 set statusline+=%*
 
 
+let g:prettier#exec_cmd_async = 1
+
 let g:ale_fixers = {}
 
 let g:ale_fixers['javascript'] = ['prettier']
