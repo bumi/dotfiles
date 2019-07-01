@@ -43,3 +43,15 @@
 [submodule "vim/vim.symlink/bundle/ale"]
 	path = vim/vim.symlink/bundle/ale
 	url = https://github.com/w0rp/ale.git
+[submodule "vim/vim.symlink/bundle/typescript-vim"]
+	path = vim/vim.symlink/bundle/typescript-vim
+	url = https://github.com/leafgarland/typescript-vim.git
+[submodule "vim/vim.symlink/bundle/ack-vim"]
+	path = vim/vim.symlink/bundle/ack-vim
+	url = https://github.com/mileszs/ack.vim.git
+[submodule "vim/vim.symlink/bundle/vim-ruby-autocomplete"]
+	path = vim/vim.symlink/bundle/vim-ruby-autocomplete
+	url = https://github.com/Shadowsith/vim-ruby-autocomplete.git
+[submodule "vim/vim.symlink/bundle/vim-mucomplete"]
+	path = vim/vim.symlink/bundle/vim-mucomplete
+	url = https://github.com/lifepillar/vim-mucomplete.git

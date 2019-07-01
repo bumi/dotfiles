@@ -1,9 +1,13 @@
 
 IRB.conf[:AUTO_INDENT] = true
+IRB.conf[:SAVE_HISTORY] = 100
 
 require 'rubygems'
 require 'interactive_editor'
 require 'wirble'
+
+require 'irb/completion'
+
 
 Wirble.init
 Wirble.colorize

@@ -46,6 +46,16 @@ autocmd FileType * set tabstop=2|set shiftwidth=2|set expandtab
 let mapleader = ","
 
 
+
+" Completion
+set completeopt+=menuone
+set shortmess+=c   " Shut off completion messages
+set belloff+=ctrlg " If Vim beeps during completion
+let g:mucomplete#enable_auto_at_startup = 1
+
+au FileType mail setlocal completeopt=menuone,noselect,noinsert
+let g:mucomplete#chains = { 'mail': [ 'user', 'ulti' ] }
+
 " UI
 " ===========================
 
@@ -93,8 +103,10 @@ set hlsearch                    " highlight search terms
 set incsearch                   " start highlighting (partial) matches as soon as you start typing letters after '/'
 
 " Git-Grep.Vim
-nnoremap <leader>a :GitGrep 
+" nnoremap <leader>a :GitGrep 
 
+cnoreabbrev Ack Ack!
+nnoremap <Leader>a :Ack!<Space>"
 
 " TABS
 " ==============
@@ -175,12 +187,14 @@ set statusline+=%{fugitive#statusline()}
 set statusline+=%*
 
 
-let g:prettier#exec_cmd_async = 1
+" let g:prettier#exec_cmd_async = 1
 
 let g:ale_fixers = {}
+let g:ale_linters = {}
 
-let g:ale_fixers['javascript'] = ['prettier']
-let g:ale_javascript_prettier_options = ''
+" let g:ale_fixers['javascript'] = ['prettier']
+let g:ale_linters['javascript'] = []
+" let g:ale_javascript_prettier_options = ''
 
 let g:airline#extensions#ale#enabled = 1
 
@@ -197,7 +211,13 @@ let g:airline#extensions#ale#enabled = 1
 
 " noooo whitespace
 " ===============
-"
+" Highlight trailing whitespaces
+highlight ExtraWhitespace ctermbg=red guibg=red
+au ColorScheme * highlight ExtraWhitespace guibg=red
+au BufEnter * match ExtraWhitespace /\s\+$/
+au InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+au InsertLeave * match ExtraWhiteSpace /\s\+$/"
+
 function! <SID>StripTrailingWhitespaces()
     " Preparation: save last search, and cursor position.
     let _s=@/
@@ -210,5 +230,5 @@ function! <SID>StripTrailingWhitespaces()
     call cursor(l, c)
 endfunction
 
-autocmd BufWritePre *.py,*.js,*.rb :call <SID>StripTrailingWhitespaces()
+autocmd BufWritePre *.py,*.js,*.rb,*.sol,*.json,*.css,*.html :call <SID>StripTrailingWhitespaces()
 

@@ -9,6 +9,9 @@ export GOPATH=$HOME/src/go
 PATH=$PATH:$GOPATH/bin
 
 PATH=$PATH:./node_modules/.bin:$HOME/.node_modules/bin
+
+PATH=$PATH:$HOME/.cargo/bin
+
 # install node modules locally
 export npm_config_prefix=$HOME/.node_modules
 
