@@ -52,6 +52,7 @@ set completeopt+=menuone
 set shortmess+=c   " Shut off completion messages
 set belloff+=ctrlg " If Vim beeps during completion
 let g:mucomplete#enable_auto_at_startup = 1
+let g:mucomplete#completion_delay = 1
 
 au FileType mail setlocal completeopt=menuone,noselect,noinsert
 let g:mucomplete#chains = { 'mail': [ 'user', 'ulti' ] }
@@ -106,7 +107,7 @@ set incsearch                   " start highlighting (partial) matches as soon a
 " nnoremap <leader>a :GitGrep 
 
 cnoreabbrev Ack Ack!
-nnoremap <Leader>a :Ack!<Space>"
+nnoremap <Leader>a :Ack!<Space>
 
 " TABS
 " ==============

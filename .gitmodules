@@ -52,6 +52,3 @@
 [submodule "vim/vim.symlink/bundle/vim-ruby-autocomplete"]
 	path = vim/vim.symlink/bundle/vim-ruby-autocomplete
 	url = https://github.com/Shadowsith/vim-ruby-autocomplete.git
-[submodule "vim/vim.symlink/bundle/vim-mucomplete"]
-	path = vim/vim.symlink/bundle/vim-mucomplete
-	url = https://github.com/lifepillar/vim-mucomplete.git

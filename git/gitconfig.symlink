@@ -21,10 +21,11 @@
 [core]
 	editor = vim
 	excludesfile = ~/.gitignore
-	autocrlf = input
+	autocrlf = false
 	safecrlf = true
 [branch]
 	autosetuprebase = always
+	sort = -committerdate
 [push]
 	default = tracking
   followTags = true
@@ -37,6 +38,11 @@
 	# With write access
 	insteadOf = wgh:
 [url "git@heroku.com:"]
-	insteadOf = heroku:
+  insteadOf = heroku:
 [credential]
 	helper = /usr/lib/git-core/git-credential-libsecret
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
